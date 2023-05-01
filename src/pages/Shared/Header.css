@@ -1,0 +1,15 @@
+.btn-color{
+    background-color: #E5522E;
+    color: white;
+}
+.btn-color:hover{
+    border:1px solid #E5522E;
+    color: #E5522E;
+}
+.text-color{
+    color: #E5522E;
+}
+
+.nav-item:hover{
+    color: #E5522E;
+}
