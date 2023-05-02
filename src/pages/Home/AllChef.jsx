@@ -16,7 +16,8 @@ const AllChef = () => {
       <h1>Bangladeshi Chef</h1>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {allChef.map((chef) => (
-          <div className="col" key={chef.id}>
+          <div className="col" key={chef.id} 
+          chef ={chef}>
             <div className="card">
               <img src={chef.picture} className="card-img-top" alt="..." />
               <div className="card-body">

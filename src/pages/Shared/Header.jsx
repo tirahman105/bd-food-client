@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import './Header.css'
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const Header = () => {
+
+  // const {user} = useContext(AuthContext);
+
     return (
         <Navbar bg="light" className='shadow p-3 mb-5 bg-body rounded' expand="lg">
       <Container>
@@ -10,13 +15,21 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto justify-content-center align-items-center">
-            <Nav.Link className='nav-item fw-bold'>Home</Nav.Link>
+            
+              <Link className='text-decoration-none text-color fw-bold' to='/'>Home</Link>
+            
             <Nav.Link className='nav-item fw-bold'>Blog</Nav.Link>
             
            
           </Nav>
           <div className='text-center'>
-            <Nav.Link ><button className='btn btn-color'>Sign In</button></Nav.Link>
+            
+            {
+              // user ? <Nav.Link ><button className='btn btn-color'>Sign Out</button></Nav.Link>
+              // : 
+                <Link className='btn btn-color' to="/login">Sign In</Link>
+                
+            }
           </div>
           
         </Navbar.Collapse>

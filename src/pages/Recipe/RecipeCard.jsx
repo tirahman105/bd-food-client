@@ -2,12 +2,13 @@ import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { FaHeart } from "react-icons/fa";
 
-const RecipeCard = ({recipe}) => {
-    const {name, ingredients, method, rating} = recipe;
+
+const RecipeCard = ({recipe }) => {
+    const {name, ingredients, method, rating} = recipe;    
     return (
         <div className='container'>
-
-       <Col>
+            
+    <Col>
        <Card className='my-3'>
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
