@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext);
+    const {signIn, signInWithGoogle} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
@@ -30,9 +30,20 @@ const Login = () => {
         .catch(error => {
           console.log(error)
         })
+        
     
       }
-
+      
+const handleGoogleSignIn = () => {
+  signInWithGoogle()
+  .then(result => {
+    const loggedUser = result.user;
+    console.log(loggedUser)
+  })
+  .catch(error => {
+    console.log(error)
+  })
+}
 
   return (
     <div className="bg-login">
@@ -52,9 +63,13 @@ const Login = () => {
        
         
           <button className="btn btn-color mb-3">Login</button>
+          
         
         <p>Not a member? <Link to="/register" className="text-danger ">Register</Link></p>
       </Form>
+      <div>
+            <button onClick={handleGoogleSignIn} className="btn btn-color">Sign in With Google</button>
+          </div>
     </div>
     </div>
   );
