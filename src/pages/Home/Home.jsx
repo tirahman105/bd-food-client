@@ -1,11 +1,13 @@
 import React from "react";
 import {  Col, Row } from "react-bootstrap";
 import fish from "../../assets/fish.png";
+import AllChef from "./AllChef";
 
 
 
 const Home = () => {
   return (
+    <>
     <Row className="justify-content-center align-items-center mx-auto">
       <Col md={6}>
         <h1>Discover the rich flavors of Bangladeshi cuisine</h1>
@@ -18,6 +20,10 @@ const Home = () => {
 
       
     </Row>
+    <Row>
+      <AllChef></AllChef>
+    </Row>
+    </>
   );
 };
 

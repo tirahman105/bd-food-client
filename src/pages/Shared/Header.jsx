@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <Navbar bg="light" className='shadow p-3 mb-5 bg-body rounded' expand="lg">
       <Container>
-        <Navbar.Brand href="#home">BD Food</Navbar.Brand>
+        <Navbar.Brand href="#home"> <span className='brand-color fw-bold'>BD</span> <span className='text-success fw-bold'>Food</span> </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto justify-content-center align-items-center">
