@@ -30,7 +30,7 @@ const AllChef = () => {
                 <p className="card-text">
                   Likes: {chef.likes}
                 </p>
-               <button className="btn btn-color"> <Link to=''>View Recipes</Link> </button>
+               <button className="btn btn-color"> <Link to={`/chef/${chef.id}`}>View Recipes</Link> </button>
               </div>
             </div>
           </div>

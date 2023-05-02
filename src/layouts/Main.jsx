@@ -3,14 +3,14 @@ import Header from '../pages/Shared/Header';
 import Footer from '../pages/Shared/Footer';
 import { Container } from 'react-bootstrap';
 import Home from '../pages/Home/Home';
+import { Outlet } from 'react-router-dom';
 
 const Main = () => {
     return (
         <div>
             <Header></Header>
-            <Container>
-                <Home></Home>
-            </Container>
+            
+            <Outlet></Outlet>
             <Footer></Footer>
         </div>
     );
