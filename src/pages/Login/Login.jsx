@@ -11,16 +11,15 @@ const Login = () => {
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control name="email" type="email" placeholder="Enter email" />
+          <Form.Control name="email" type="email" placeholder="Enter email" required />
           
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control name="password" type="password" placeholder="Password" />
+          <Form.Control name="password" type="password" placeholder="Password" required />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        </Form.Group>
+       
         
           <button className="btn btn-color mb-3">Login</button>
         
