@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from 'sweetalert2'
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [error, setError] = useState('');
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -13,12 +15,28 @@ const Register = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, photo, email, password);
+    const confirm = form.confirm.value;
+   
+    setError('');
+
+    if(password !== confirm){
+      setError('Your password did not match')
+      return
+  }else if(password.length < 6 ){
+      setError('Password must be at least 6 characters or longer ')
+      return
+  }
 
     createUser(email, password)
       .then((result) => {
         const createdUser = result.user;
         console.log(createdUser);
+        form.reset();
+        Swal.fire(
+          'Success!',
+          'Your Account has been created!',
+          'success'
+        )
       })
       .catch((error) => {
         console.log(error);
@@ -57,6 +75,15 @@ const Register = () => {
               required
             />
           </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Confirm Password</Form.Label>
+            <Form.Control
+              name="confirm"
+              type="password"
+              placeholder="Password"
+              required
+            />
+          </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Photo url</Form.Label>
@@ -69,7 +96,7 @@ const Register = () => {
           </Form.Group>
 
           <button className="btn btn-color mb-3">Register</button>
-
+    <p className="text-danger">{error}</p>
           <p>
             Already a member?{" "}
             <Link to="/login" className="text-danger ">

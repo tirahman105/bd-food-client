@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { Button, Form } from "react-bootstrap";
+import {  Form } from "react-bootstrap";
 import './Login.css'
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Login = () => {
     const {signIn, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
@@ -78,8 +79,8 @@ const handleGithubSignIn = () => {
         <p>Not a member? <Link to="/register" className="text-danger ">Register</Link></p>
       </Form>
       <div>
-            <button onClick={handleGoogleSignIn} className="btn btn-color">Sign in With Google</button>
-            <button onClick={handleGithubSignIn} className="btn btn-color">Sign in With GitHub</button>
+            <button onClick={handleGoogleSignIn} className="btn btn-outline-primary"> <FaGoogle/> Sign in With Google</button>
+            <button onClick={handleGithubSignIn} className="btn btn-outline-dark ms-3"> <FaGithub/> Sign in With GitHub</button>
           </div>
     </div>
     </div>
