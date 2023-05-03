@@ -10,7 +10,9 @@ const Chef = () => {
     const chefRecipe = useLoaderData();
     return (
         <div>
+
             
+            <h1>{id}</h1>
             
             <h2>Chef page : {chefRecipe.length}</h2>
            <div className="container">

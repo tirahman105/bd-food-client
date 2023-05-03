@@ -39,7 +39,9 @@ const handleGoogleSignIn = () => {
   signInWithGoogle()
   .then(result => {
     const loggedUser = result.user;
-    console.log(loggedUser)
+    console.log(loggedUser);
+    navigate(from), {replace: true};
+
   })
   .catch(error => {
     console.log(error)
@@ -49,7 +51,8 @@ const handleGithubSignIn = () => {
   signInWithGithub()
   .then(result => {
     const loggedUser = result.user;
-    console.log(loggedUser)
+    console.log(loggedUser);
+    navigate(from), {replace: true};
   })
   .catch(error => {
     console.log(error)

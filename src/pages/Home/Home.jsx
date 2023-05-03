@@ -20,7 +20,7 @@ const Home = () => {
 
       
     </Row>
-    <Row>
+    <Row >
       <AllChef></AllChef>
     </Row>
     </>
