@@ -11,3 +11,7 @@
     background-color: #e5532e11;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+.chef-banner-bg{
+    background: rgb(212,95,23);
+    background: linear-gradient(90deg, rgba(212,95,23,0.905374649859944) 0%, rgba(233,169,71,0.35075280112044815) 36%, rgba(255,136,0,0.3395483193277311) 100%);
+}

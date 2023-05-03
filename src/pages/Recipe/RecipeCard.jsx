@@ -1,25 +1,26 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { FaHeart } from "react-icons/fa";
+import './RecipeCard.css'
 
 
 const RecipeCard = ({recipe }) => {
-    const {name, ingredients, method, rating} = recipe;    
+    const {name, ingredients, method, image, rating} = recipe;    
     return (
         <div className='container'>
             
     <Col>
-       <Card className='my-3'>
-      <Card.Img variant="top" src="holder.js/100px180" />
+       <Card className='my-3 bg-card'>
+      <Card.Img variant="top" src={image} />
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
-       <p className='alert alert-warning'>ingredients</p>
+        <Card.Title className='text-center'>{name}</Card.Title>
+       <p className='headline-bg p-3'>ingredients</p>
         <ul>
                             {ingredients.map((ingredient, index) => (
                                 <li key={index}>{ingredient}</li>
                             ))}
                         </ul>
-        <p className='alert alert-warning'> Recipe</p>
+        <p className='headline-bg p-3'> Recipe</p>
         <Card.Text>
          {method}
         </Card.Text>
