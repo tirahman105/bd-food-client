@@ -14,13 +14,13 @@ const FoodCategories = () => {
             <div className='food-icon text-center mx-4'>
                 <img src="https://cdn-icons-png.flaticon.com/512/3143/3143643.png" alt="" />
             </div>
-            <p>Fish</p>
+            <p>Beef</p>
             </div>
             <div className='mx-4'>
             <div className='food-icon text-center mx-4'>
             <img src="https://cdn-icons-png.flaticon.com/512/3075/3075494.png" alt="" />
             </div>
-            <p>Beef</p>
+            <p>Fish</p>
             </div>
             <div className='mx-4'>
             <div className='food-icon text-center mx-4'>

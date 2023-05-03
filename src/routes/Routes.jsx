@@ -5,12 +5,15 @@ import Chef from "../pages/Home/Chef";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
+
         children: [
             {
                 path: '/',
@@ -29,7 +32,8 @@ const router = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
-            }
+            },
+            
         ]
     }
 ])
