@@ -3,6 +3,7 @@ import {  Col, Row } from "react-bootstrap";
 import fish from "../../assets/fish.png";
 import AllChef from "./AllChef";
 import FoodCategories from "./FoodCategories";
+import AppSection from "./AppSection";
 
 
 
@@ -28,6 +29,7 @@ const Home = () => {
     <Row >
       <AllChef></AllChef>
     </Row>
+    <AppSection></AppSection>
     </>
   );
 };
