@@ -5,6 +5,9 @@ import './RecipeCard.css'
 import  { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Rating } from '@smastrom/react-rating';
+
+import '@smastrom/react-rating/style.css'
 
 
 const RecipeCard = ({recipe }) => {
@@ -30,7 +33,7 @@ const RecipeCard = ({recipe }) => {
         <div className='container'>
             
     <Col>
-       <Card className='my-3 bg-card'>
+       <Card className='my-3 bg-card h-100'>
       <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title className='text-center'>{name}</Card.Title>
@@ -44,7 +47,15 @@ const RecipeCard = ({recipe }) => {
         <Card.Text>
          {method}
         </Card.Text>
+       <div className='d-flex  justify-content-between'>
+       
+        <div className='flex-grow-1 d-flex align-items-center'>
+        <Rating style={{ maxWidth: 150 }} 
+          value={Math.round(rating || 0)} readOnly />
+          <span>{rating}</span>
+        </div>
         <button onClick={handleClick} disabled={isDisabled}  className='btn btn-color'><FaHeart /> </button>
+       </div>
       </Card.Body>
       <ToastContainer />
     </Card>
