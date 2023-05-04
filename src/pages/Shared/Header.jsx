@@ -12,6 +12,7 @@ const Header = () => {
       .then()
       .catch((error) => console.log(error));
   };
+  
 
   return (
     <Navbar bg="light" className="shadow p-3 mb-5 bg-body rounded" expand="lg">

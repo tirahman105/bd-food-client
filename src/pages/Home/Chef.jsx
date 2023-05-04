@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import RecipeCard from "../Recipe/RecipeCard";
 import { GiCampCookingPot, GiCook } from "react-icons/gi";
 import { AiFillLike } from "react-icons/ai";
+import LazyLoad from 'react-lazy-load';
 
 const Chef = () => {
   const { id } = useParams();
@@ -13,11 +14,13 @@ const Chef = () => {
       <div className="card p-4 chef-banner-bg">
         <div className="row">
           <div className="col-md-4">
+            <LazyLoad>
             <img
               className="img-fluid rounded-start"
               src={chefRecipe?.selectedChef?.picture}
               alt=""
             />
+            </LazyLoad>
           </div>
           <div className="col-md-8">
             <div className="card-body">
