@@ -1,0 +1,17 @@
+.blog-card{
+    background-color: #e5532e11;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+pre {
+    background-color: #2a2828;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+  }
+  
+  code {
+    display: block;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.5;
+  }
