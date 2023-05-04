@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import ActiveLink from "../../routes/ActiveLink/ActiveLink";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -25,12 +26,12 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto justify-content-center align-items-center">
-            <Link className="text-decoration-none text-color fw-bold" to="/">
+            <ActiveLink className="text-decoration-none text-color fw-bold" to="/">
               Home
-            </Link>
-            <Link className="text-decoration-none text-color fw-bold ms-4" to="/blog">
+            </ActiveLink>
+            <ActiveLink to="/blog">
               Blog
-            </Link>
+            </ActiveLink>
 
             
           </Nav>
