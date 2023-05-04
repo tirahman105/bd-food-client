@@ -9,7 +9,7 @@ const ErrorPage = () => {
             <div className="col-md-6 d-flex justify-content-center align-items-center">
       <div>
       <h1>Oops! Something went wrong.</h1>
-      <h3> {error.message}</h3>
+      {/* <h3> {error.message}</h3> */}
       <Link to='/'><button className="btn btn-color mt-3" >Back to Home</button> </Link>
       
       </div>

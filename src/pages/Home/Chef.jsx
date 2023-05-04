@@ -7,6 +7,7 @@ import { AiFillLike } from "react-icons/ai";
 const Chef = () => {
   const { id } = useParams();
   const chefRecipe = useLoaderData();
+  
   return (
     <div className="container">
       <div className="card p-4 chef-banner-bg">
