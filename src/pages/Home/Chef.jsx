@@ -46,7 +46,7 @@ const Chef = () => {
       </div>
       
 
-      <h2>Chef page : {chefRecipe.length}</h2>
+      <h5 className="text-center my-4 fw-bold">Top 3 recipes of : {chefRecipe?.selectedChef?.name}</h5>
       <div className="container">
         
         <div className="row row-cols-1 row-cols-md-3 g-4">

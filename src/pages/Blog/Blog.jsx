@@ -1,10 +1,17 @@
 import React from "react";
 import "./Blog.css";
+import Pdf from "react-to-pdf";
 
 const Blog = () => {
+    const ref = React.createRef();
   return (
     <div className="container">
-      <div className="row">
+         <div className="text-center">
+      <Pdf targetRef={ref} filename="BD-food-blog.pdf">
+         {({ toPdf }) => <button className="btn btn-color" onClick={toPdf}>Generate Pdf</button>}
+      </Pdf>
+      </div>
+      <div className="row w-75 mx-auto"  ref={ref}>
         <div className="card blog-card p-4 my-4">
           <h1>
             Tell us the differences between uncontrolled and controlled
@@ -144,7 +151,9 @@ const Blog = () => {
           </p>
         </div>
       </div>
+     
     </div>
+   
   );
 };
 
