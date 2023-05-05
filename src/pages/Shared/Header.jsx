@@ -37,11 +37,19 @@ const Header = () => {
           </Nav>
           <div className="text-center">
             {user ? (
+              <> 
+              <div className="d-flex text-center">
+                <img className="rounded-circle avatar-img" src={user?.photoURL} title={user.displayName} alt="" />
               <Nav.Link>
-                <button onClick={handleLogOut} className="btn btn-color">
+               
+                
+                <button onClick={handleLogOut} className="btn btn-color ms-2">
                   Sign Out
                 </button>
               </Nav.Link>
+                </div>
+              </>
+
             ) : (
               <Link className="btn btn-color" to="/login">
                 Sign In
