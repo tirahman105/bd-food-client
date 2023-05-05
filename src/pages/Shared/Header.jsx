@@ -35,11 +35,14 @@ const Header = () => {
 
             
           </Nav>
-          <div className="text-center">
+          <div className="text-center d-flex justify-content-center align-items-center">
+            <div>
+
+            
             {user ? (
               <> 
               <div className="d-flex text-center">
-                <img className="rounded-circle avatar-img" src={user?.photoURL} title={user.displayName} alt="" />
+                <img className="rounded-circle avatar-img" src={user?.photoURL} title={user.displayName} alt="User image" />
               <Nav.Link>
                
                 
@@ -55,6 +58,7 @@ const Header = () => {
                 Sign In
               </Link>
             )}
+            </div>
           </div>
         </Navbar.Collapse>
       </Container>
